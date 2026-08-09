@@ -144,7 +144,6 @@ export default function Home() {
         <a className="nav-link" href="#recent-title">Recent projects</a>
       </nav>
       <section className="hero">
-        <div className="hero-eyebrow">AI-assisted electronics design</div>
         <h1>What will you build?</h1>
         <p className="hero-copy">Describe your idea. Blueprint will choose the parts, draw the circuit, and create the firmware and build instructions.</p>
         <form className="prompt-box" onSubmit={(event) => { void startFlow(event); }}>
@@ -227,11 +226,6 @@ export default function Home() {
         <div className="example-label">Try an example</div>
         <div className="examples">
           {examples.map((example) => <button type="button" className="chip" key={example} onClick={() => { setPrompt(example); setClarify(null); }}>{example}</button>)}
-        </div>
-        <div className="workflow-steps" aria-label="How Blueprint works">
-          <div><span>01</span><strong>Describe</strong><small>Tell us what the device should do.</small></div>
-          <div><span>02</span><strong>Review</strong><small>Check the parts, wiring, and safety notes.</small></div>
-          <div><span>03</span><strong>Build</strong><small>Use the firmware and assembly guide.</small></div>
         </div>
         <section className="recent-projects" aria-labelledby="recent-title"><div className="recent-heading"><div><div className="example-label">Your projects</div><h2 id="recent-title">Recent projects</h2></div>{recentState === "error" && <button className="secondary" onClick={refreshRecent}>Retry</button>}</div>{recentState === "loading" && <div className="state-card">Loading recent projects…</div>}{recentState === "error" && <div className="state-card">Recent projects could not be loaded.</div>}{recentState === "ready" && !recent.length && <div className="state-card">Your generated projects will appear here.</div>}{recent.length > 0 && <div className="recent-grid">{recent.map((item) => <a href={`/projects/${item.id}`} className="recent-card" key={item.id}><small>REV {String(item.revision).padStart(2, "0")} · {item.components} COMPONENTS</small><strong>{item.title}</strong><span>{item.summary}</span><time dateTime={item.updatedAt}>{item.updatedAt.slice(0, 10)}</time></a>)}</div>}</section>
       </section>
