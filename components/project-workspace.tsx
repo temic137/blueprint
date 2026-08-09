@@ -127,6 +127,7 @@ export default function ProjectWorkspace({ id, project, revision, schematicImage
               <div className="head-title"><div className="panel-toggles no-print"><button className="secondary" onClick={() => setAssistantOpen((open) => { if (!open) setRailOpen(false); return !open; })} aria-expanded={assistantOpen}>Assistant</button><button className="secondary" onClick={() => setRailOpen((open) => { if (!open) setAssistantOpen(false); return !open; })} aria-expanded={railOpen}>Details</button></div><h2>{project.title}</h2></div>
               <details className="project-actions no-print"><summary>Actions</summary><div><a href={`/api/projects/${id}/download`}>Download project ZIP</a></div></details>
             </div>
+            <nav className="workspace-tabs" aria-label="Project views">{tabs.map((item) => <button key={item} className={tab === item ? "active" : ""} aria-current={tab === item ? "page" : undefined} onClick={() => selectTab(item)}>{item === "Changes" ? "History" : item}</button>)}</nav>
             <div className="active-view"><label htmlFor="project-view">View</label><select id="project-view" value={tab} onChange={(event) => selectTab(event.target.value as Tab)}>{tabs.map((item) => <option key={item} value={item}>{item === "Changes" ? "History" : item}</option>)}</select><small>{boardName}</small></div>
           </header>
           <div className={`content ${tab === "Schematic" || tab === "Changes" ? "content-wide" : ""}`}>
