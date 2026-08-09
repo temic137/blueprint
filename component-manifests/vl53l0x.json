@@ -1,0 +1,13 @@
+{
+  "id": "vl53l0x",
+  "name": "VL53L0X time-of-flight distance sensor",
+  "aliases": ["laser distance sensor", "ToF sensor"],
+  "category": "sensor",
+  "capabilities": ["distance_measurement"],
+  "supportLevel": "datasheet-derived",
+  "source": "STMicroelectronics VL53L0X datasheet",
+  "baseType": "generic_i2c_module",
+  "description": "I2C distance sensor breakout represented through the validated generic I2C family",
+  "firmware": "pololu/VL53L0X",
+  "requirements": ["Use 3.3V-compatible breakout-board power and verify the module address"]
+}

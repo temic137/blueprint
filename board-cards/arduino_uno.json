@@ -1,0 +1,14 @@
+{
+  "id": "arduino_uno",
+  "name": "Arduino Uno",
+  "aliases": ["uno", "arduino"],
+  "platformio": "uno",
+  "platform": "atmelavr",
+  "family": "arduino",
+  "logicVoltage": 5,
+  "pins": ["5V", "3V3", "VIN", "GND", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13", "A0", "A1", "A2", "A3", "A4", "A5"],
+  "signalPins": ["D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D12", "D13", "A0", "A1", "A2", "A3", "A4", "A5"],
+  "visual": "wokwi-arduino-uno",
+  "summary": "5V ATmega328P classic maker board; prefer for simple wired sensors/actuators without Wi-Fi.",
+  "source": "seed"
+}

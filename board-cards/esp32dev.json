@@ -1,0 +1,14 @@
+{
+  "id": "esp32dev",
+  "name": "ESP32 DevKit V1",
+  "aliases": ["esp32", "esp32 devkit", "esp32dev"],
+  "platformio": "esp32dev",
+  "platform": "espressif32",
+  "family": "esp32",
+  "logicVoltage": 3.3,
+  "pins": ["3V3", "VIN", "GND", "GPIO4", "GPIO13", "GPIO14", "GPIO16", "GPIO17", "GPIO18", "GPIO19", "GPIO21", "GPIO22", "GPIO23", "GPIO25", "GPIO26", "GPIO27", "GPIO32", "GPIO33", "GPIO34", "GPIO35", "GPIO36", "GPIO39"],
+  "signalPins": ["GPIO4", "GPIO13", "GPIO14", "GPIO16", "GPIO17", "GPIO18", "GPIO19", "GPIO21", "GPIO22", "GPIO23", "GPIO25", "GPIO26", "GPIO27", "GPIO32", "GPIO33", "GPIO34", "GPIO35", "GPIO36", "GPIO39"],
+  "visual": "wokwi-esp32-devkit-v1",
+  "summary": "3.3V Wi-Fi/Bluetooth MCU with many GPIOs; good when wireless or ESP32 libraries matter.",
+  "source": "seed"
+}

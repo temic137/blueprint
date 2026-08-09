@@ -1,0 +1,13 @@
+{
+  "id": "speaker_4ohm",
+  "name": "4-ohm loudspeaker",
+  "aliases": ["4 ohm speaker", "speaker", "loudspeaker"],
+  "category": "audio output",
+  "capabilities": ["audio_output"],
+  "supportLevel": "datasheet-derived",
+  "source": "Generic passive 4-ohm loudspeaker electrical contract",
+  "pins": ["POS", "NEG"],
+  "boardPins": { "POS": [], "NEG": [] },
+  "description": "Passive loudspeaker that must be driven by a suitable amplifier, never directly by an ESP32 GPIO",
+  "requirements": ["Connect across one amplifier bridge-output pair and observe the amplifier load rating"]
+}

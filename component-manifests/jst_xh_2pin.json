@@ -1,0 +1,12 @@
+{
+  "id": "jst_xh_2pin",
+  "name": "JST XH 2-pin connector",
+  "aliases": ["JST-XH", "XH 2-pin", "2.5mm speaker connector"],
+  "category": "connector",
+  "capabilities": ["two_wire_connection"],
+  "supportLevel": "datasheet-derived",
+  "source": "JST XH connector series catalog",
+  "pins": ["1A", "2A", "1B", "2B"],
+  "description": "Two-circuit 2.5mm-pitch wire-to-board connector; pin function follows the circuit it carries",
+  "requirements": ["Pins 1A and 1B are the two sides of circuit 1; pins 2A and 2B are the two sides of circuit 2", "Connect the source to side A and the load to the matching side B", "Keep current within the selected contact and wire rating"]
+}

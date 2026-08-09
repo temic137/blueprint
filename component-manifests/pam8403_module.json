@@ -1,0 +1,27 @@
+{
+  "id": "pam8403_module",
+  "name": "PAM8403 stereo amplifier module",
+  "aliases": ["PAM8403", "stereo class-D amplifier", "3W stereo amplifier"],
+  "category": "audio output",
+  "capabilities": ["stereo_audio_output", "speaker_amplification"],
+  "supportLevel": "datasheet-derived",
+  "source": "Diodes Incorporated PAM8403 datasheet DS36439 Rev. 2-3",
+  "pins": ["VCC", "GND", "LIN", "RIN", "LOUT+", "LOUT-", "ROUT+", "ROUT-"],
+  "boardPins": {
+    "VCC": ["VIN"],
+    "GND": ["GND"],
+    "LIN": ["GPIO25"],
+    "RIN": ["GPIO26"],
+    "LOUT+": [],
+    "LOUT-": [],
+    "ROUT+": [],
+    "ROUT-": []
+  },
+  "description": "5V filterless class-D stereo amplifier module represented by its common breakout terminals",
+  "firmware": "Arduino core dacWrite on ESP32 GPIO25 and GPIO26",
+  "requirements": [
+    "Use 5V power and a shared ESP32 ground",
+    "Drive LIN and RIN from ESP32 DAC-capable GPIO25 and GPIO26",
+    "Each bridge-tied speaker connects across one matching OUT+ and OUT- pair; never ground a speaker output"
+  ]
+}

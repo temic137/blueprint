@@ -1,0 +1,13 @@
+{
+  "id": "raspberry_pi_4",
+  "name": "Raspberry Pi 4 Model B",
+  "aliases": ["raspberry pi", "raspberry pi 4", "rpi4", "pi 4", "raspi"],
+  "platformio": "",
+  "platform": "linux_arm",
+  "family": "raspberrypi",
+  "logicVoltage": 3.3,
+  "pins": ["3V3", "5V", "GND", "BCM2", "BCM3", "BCM4", "BCM5", "BCM6", "BCM7", "BCM8", "BCM9", "BCM10", "BCM11", "BCM12", "BCM13", "BCM14", "BCM15", "BCM16", "BCM17", "BCM18", "BCM19", "BCM20", "BCM21", "BCM22", "BCM23", "BCM24", "BCM25", "BCM26", "BCM27"],
+  "signalPins": ["BCM2", "BCM3", "BCM4", "BCM5", "BCM6", "BCM7", "BCM8", "BCM9", "BCM10", "BCM11", "BCM12", "BCM13", "BCM14", "BCM15", "BCM16", "BCM17", "BCM18", "BCM19", "BCM20", "BCM21", "BCM22", "BCM23", "BCM24", "BCM25", "BCM26", "BCM27"],
+  "summary": "Full Linux SBC with 40-pin GPIO header; use when the project needs a computer-class Pi, not a Pico MCU.",
+  "source": "catalog"
+}

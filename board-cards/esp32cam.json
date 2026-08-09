@@ -1,0 +1,13 @@
+{
+  "id": "esp32cam",
+  "name": "AI Thinker ESP32-CAM with OV2640",
+  "aliases": ["esp32-cam", "esp32 cam", "ai thinker cam"],
+  "platformio": "esp32cam",
+  "platform": "espressif32",
+  "family": "esp32",
+  "logicVoltage": 3.3,
+  "pins": ["3V3", "VIN", "GND", "GPIO13", "GPIO14"],
+  "signalPins": ["GPIO13", "GPIO14"],
+  "summary": "ESP32 with built-in OV2640 camera; only GPIO13/GPIO14 are safe for external signals.",
+  "source": "seed"
+}
