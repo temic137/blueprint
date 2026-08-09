@@ -837,3 +837,172 @@ h1 { max-width: 760px; margin-bottom: 18px; font-size: clamp(44px, 7vw, 72px); f
   .project-head { padding: 15px 15px 0; }
   .content { padding: 22px 15px; }
 }
+
+/* Industrial CAD workbench. */
+:root {
+  --cad-black: #111418;
+  --cad-panel: #181c21;
+  --cad-raised: #22272d;
+  --cad-line: #353b42;
+  --draft: #f2efe7;
+  --draft-deep: #e7e2d7;
+  --draft-line: #c9c2b4;
+  --signal: #ff7a1a;
+  --valid: #28a66a;
+}
+
+html, body { background: var(--cad-black); }
+body { color: #e9edf1; font-family: var(--font-interface), Arial, sans-serif; }
+
+.nav {
+  height: 58px;
+  padding: 0 20px;
+  border-color: var(--cad-line);
+  background: var(--cad-black);
+  color: #f2f4f6;
+  box-shadow: none;
+}
+.brand { font-size: 16px; letter-spacing: -.02em; }
+.brand small { color: #7f8994; letter-spacing: .15em; }
+.brand-mark { width: 34px; height: 34px; border: 1px solid #3d83bd; border-radius: 3px; background: var(--blueprint); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+.nav-link, .project-status { color: #99a3ad; font-family: var(--font-technical), monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
+.nav-link:hover { color: white; }
+.project-status { padding: 6px 9px; border: 1px solid var(--cad-line); background: var(--cad-panel); }
+.project-status i { background: var(--valid); box-shadow: 0 0 0 3px rgba(40,166,106,.12); }
+
+.hero {
+  width: min(1180px, calc(100% - 40px));
+  min-height: calc(100vh - 58px);
+  padding: 72px 0 56px;
+  color: #eef1f4;
+  text-align: left;
+}
+.hero::before {
+  inset: 0;
+  width: 100%;
+  height: 430px;
+  transform: none;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px), radial-gradient(circle at 80% 20%, rgba(7,82,153,.28), transparent 38%);
+  background-size: 32px 32px, 32px 32px, auto;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+.hero-eyebrow { margin: 0 0 14px; color: var(--signal); font-family: var(--font-technical), monospace; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.hero-eyebrow::before { content: "SYSTEM 01  /  "; color: #68737e; }
+h1 { max-width: 820px; margin: 0 0 14px; font-size: clamp(48px, 7vw, 82px); line-height: .94; font-weight: 600; letter-spacing: -.065em; }
+.hero-copy { margin: 0; max-width: 650px; color: #9da7b1; font-size: 16px; }
+.prompt-box {
+  margin: 34px 0 0;
+  max-width: 900px;
+  border: 1px solid #4c535b;
+  border-radius: 3px;
+  background: var(--draft);
+  color: #1c252d;
+  box-shadow: 12px 12px 0 rgba(0,0,0,.22);
+}
+.prompt-label { padding: 14px 17px 0; color: #57616a; font-family: var(--font-technical), monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.prompt-box textarea { min-height: 132px; color: #18222c; font-size: 18px; }
+.prompt-actions { border-color: var(--draft-line); background: var(--draft-deep); }
+.prompt-hint { color: #626c75; }
+.primary { border: 1px solid #1b64a1; border-radius: 2px; background: var(--blueprint); color: white; text-transform: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.15); }
+.primary:hover { border-color: #3489ca; background: #0961ad; }
+.secondary { border-color: #4b535c; border-radius: 2px; background: var(--cad-panel); color: #d8dde2; }
+.secondary:hover { border-color: #72808c; background: var(--cad-raised); color: white; }
+.example-label { margin-top: 28px; color: #747f89; font-family: var(--font-technical), monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.examples { justify-content: flex-start; }
+.chip { border-color: var(--cad-line); border-radius: 2px; background: var(--cad-panel); color: #b9c0c7; }
+.chip:hover { border-color: var(--signal); background: #211d19; color: #f2f4f6; }
+.workflow-steps { margin: 46px 0 0; max-width: 900px; border-color: var(--cad-line); }
+.workflow-steps > div { border-color: var(--cad-line); background: rgba(24,28,33,.65); }
+.workflow-steps span { color: var(--signal); }
+.workflow-steps strong { color: #e8ecef; }
+.workflow-steps small { color: #88939d; }
+.recent-projects { margin-top: 58px; }
+.recent-heading h2 { color: #eef1f4; }
+.recent-card { border-color: var(--cad-line); border-radius: 2px; background: var(--cad-panel); color: #e7ebee; box-shadow: none; }
+.recent-card:hover { border-color: #4e86b5; background: #1b242c; color: white; transform: none; }
+.recent-card small, .recent-card time { color: #75818c; }
+.state-card { border-color: var(--cad-line); border-radius: 2px; background: var(--cad-panel); color: #8d98a3; }
+.system-status { color: #77828d; }
+.provider-strip { border-color: var(--cad-line); border-radius: 2px; background: var(--cad-panel); box-shadow: none; }
+.provider-strip > span { border-color: var(--cad-line); }
+.provider-strip small { color: #78838d; }
+.provider-strip strong { color: #d7dce1; }
+.clarify-panel, .scope-proposal { border-color: #4b535c; border-radius: 2px; background: var(--cad-panel); color: #e9edf1; box-shadow: none; }
+.clarify-header strong, .scope-proposal h3 { color: var(--signal); }
+.clarify-header span, .clarify-understanding, .clarify-questions, .scope-proposal p, .scope-proposal li { color: #9da7b1; }
+.clarify-option { border-color: var(--cad-line); border-radius: 2px; background: var(--cad-black); color: #d5dbe0; }
+.clarify-option:hover { border-color: #64717d; background: var(--cad-raised); }
+.clarify-option.selected, .clarify-option.recommended.selected { border-color: var(--signal); background: #2b231d; color: #fff; }
+
+.workspace { height: calc(100vh - 58px); grid-template-columns: 340px minmax(0,1fr) 280px; background: var(--cad-black); }
+.sidebar, .project-rail { color: #dce1e5; background: var(--cad-panel); }
+.sidebar { border-right-color: var(--cad-line); }
+.project-rail { border-left-color: var(--cad-line); }
+.back { color: #7f8a94; }
+.back:hover, .rail-group button:hover b { color: var(--signal); }
+.assistant-intro, .rail-title { border-color: var(--cad-line); }
+.project-label { color: var(--signal); }
+.assistant-intro p, .project-summary, .rail-title small, .rail-group .side-heading { color: #88939d; }
+.panel-close { border-color: var(--cad-line); border-radius: 2px; color: #929ca5; background: var(--cad-panel); }
+.panel-close:hover { border-color: #65717c; color: white; background: var(--cad-raised); }
+.assistant-welcome { border-color: #315b7d; border-radius: 2px; background: #172736; }
+.assistant-welcome span { color: #9aa8b5; }
+.assistant-message { border-radius: 2px; }
+.assistant-message.user { border-color: #3b6281; background: #172736; color: #e7eef5; }
+.assistant-message.assistant { border-color: var(--cad-line); background: var(--cad-black); }
+.assistant-message.message-clarify { border-color: #745b35; background: #2b251b; }
+.assistant-message > small, .message-actions button, .assistant-thinking button { color: #78838d; }
+.assistant-preview, .assistant-preview dl, .assistant-preview dl div { border-color: var(--cad-line); }
+.assistant-composer { border-color: #4c545c; border-radius: 2px; background: var(--cad-black); box-shadow: none; }
+.assistant-composer label, .assistant-composer .composer-footer { border-color: var(--cad-line); }
+.assistant-composer textarea { background: var(--draft); color: #1c252d; }
+
+.main { background: var(--draft-deep); }
+.project-head { padding-top: 14px; border-color: var(--draft-line); background: rgba(242,239,231,.98); color: #1b252e; box-shadow: 0 2px 0 rgba(17,20,24,.08); }
+.head-row h2 { font-size: 21px; }
+.project-head .secondary { border-color: #b9b1a3; background: transparent; color: #34414c; }
+.project-head .secondary:hover { border-color: var(--blueprint); background: #e6edf2; color: var(--blueprint); }
+.project-actions summary { color: #5f6972; }
+.project-actions div { border-color: var(--draft-line); border-radius: 2px; background: var(--draft); box-shadow: 5px 5px 0 rgba(17,20,24,.1); }
+.workspace-tabs button { border-radius: 0; color: #68727c; font-family: var(--font-technical), monospace; font-size: 9px; letter-spacing: .06em; text-transform: uppercase; }
+.workspace-tabs button:hover { color: var(--blueprint); background: #e6e4dd; }
+.workspace-tabs button.active { border-bottom-color: var(--signal); color: #18232d; }
+.active-view { border-color: var(--draft-line); color: #65707a; }
+.active-view select { border-color: var(--draft-line); border-radius: 2px; background: var(--draft); color: #1b252e; }
+.content { color: #1b252e; }
+.section-kicker { color: #65717b; letter-spacing: .14em; }
+.overview-grid, .pin-table, .assembly-list, .wire-schedule { border-color: var(--draft-line); border-radius: 2px; background: var(--draft); }
+.metric, .pin-table th, .pin-table td, .assembly-list li, .wire-row, .wire-schedule-head { border-color: var(--draft-line); }
+.metric small, .pin-table th { color: #64707a; }
+.pin-table tbody tr:hover { background: #e3e8e9; }
+.table-action { border-color: #a9a295; border-radius: 2px; background: transparent; color: var(--blueprint); }
+.table-action:hover { border-color: var(--blueprint); background: #e2e9ed; }
+.schematic-engine { border-color: #a9a295; border-radius: 2px; background: var(--draft); }
+.schematic-engine button { border-color: #a9a295; color: #59646e; }
+.schematic-engine button.active { background: var(--blueprint); color: white; }
+.schematic-tools .primary { background: var(--blueprint); }
+.schematic-tools .secondary, .view-actions .secondary { border-color: #aaa396; background: var(--draft); color: #34414c; }
+.schematic-tools .secondary:hover, .view-actions .secondary:hover { border-color: var(--blueprint); background: #e2e9ed; color: var(--blueprint); }
+.diagram { border: 2px solid #263b4d; box-shadow: 8px 8px 0 rgba(17,20,24,.16); }
+.compile-panel, .restore-confirm { border-color: var(--draft-line); border-radius: 2px; background: var(--draft); color: #1b252e; }
+.file-tabs { border-color: var(--draft-line); background: var(--draft); }
+.file-tabs button { border-color: var(--draft-line); color: #5f6a74; }
+.file-tabs button.active { background: var(--cad-panel); color: white; }
+.rail-group button, .rail-group a { border-radius: 2px; color: #b7c0c8; }
+.rail-group button:hover, .rail-group a:hover, .rail-group button.active { background: var(--cad-raised); color: white; }
+.rail-group button b { color: #63a0d2; }
+
+@media (max-width: 900px) {
+  .workspace, .workspace.assistant-collapsed, .workspace.rail-collapsed, .workspace.assistant-collapsed.rail-collapsed { min-height: calc(100vh - 58px); }
+  .assistant-sidebar, .project-rail { top: 58px; border-color: var(--cad-line) !important; }
+}
+
+@media (max-width: 560px) {
+  .nav { height: 58px; }
+  .hero { width: calc(100% - 28px); padding: 48px 0 40px; }
+  h1 { font-size: clamp(42px, 14vw, 60px); }
+  .prompt-box { box-shadow: 6px 6px 0 rgba(0,0,0,.22); }
+  .workflow-steps > div { border-color: var(--cad-line); }
+}
