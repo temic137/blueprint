@@ -1,0 +1,12 @@
+.git/
+.next/
+.platformio/
+.venv/
+generated/
+node_modules/
+*.db
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
