@@ -634,16 +634,7 @@ h1 { margin: 0 auto 18px; font-size: clamp(44px, 7vw, 72px); line-height: .98; l
   .diagram { break-inside: avoid; }
 }
 
-/* Computer-like typography without changing the original interface. */
-h1, h2, h3, h4,
-button, select,
-.brand, .brand small, .brand-mark,
-.nav-link, .project-status, .back,
-.project-label, .side-heading, .section-kicker,
-.prompt-label, .prompt-hint, .example-label,
-.generation-track, .state-card,
-.active-view, .rail-title,
-.assistant-message > small, .assistant-composer label,
-.pin-table th, .code-file-name, .structured-code code {
+/* Geist Mono is the single typeface across the interface. */
+*, *::before, *::after {
   font-family: var(--font-computer), "Cascadia Mono", monospace !important;
 }
